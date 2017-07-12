@@ -9,7 +9,7 @@ $scope.login = function(){
 	//$scope.showLoader = true;
 	$http({
 		method:'GET',
-		url:'/loginIn',
+		url:'/login',
 		params:{
 			username : $scope.username,
 			password : $scope.password
