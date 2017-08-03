@@ -10,7 +10,7 @@
 		{
 			email : $scope.email,
 			password : $scope.password,
-			setpassword : $scope.password
+			setpassword : $scope.setpassword
 		}
 	})
 .then(function(response)
