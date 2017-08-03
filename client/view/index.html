@@ -16,6 +16,7 @@ banking
 <link rel="stylesheet" type="text/css" href="css/social.css">
 <link rel="stylesheet" type="text/css" href="css/media.css">
 
+
 </head>
 <body ng-app="app">
 
@@ -68,11 +69,21 @@ banking
           </ul>
         </li>
         <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
-  </ul>
+<li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Admin
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+
+             <li><a ui-sref="admin">click here</a><li>
+            
+            
+          </ul>
+        </li>
+        
     </div>
   </div>
 </nav>
-
+ 
 <div ui-view="">
 <section class="slide-wrapper">
         <div class="container">
@@ -203,6 +214,7 @@ banking
 <SCRIPT TYPE="text/javascript" src="./controller/login.js"></SCRIPT>
 <SCRIPT TYPE="text/javascript" src="./controller/home.js"></SCRIPT>
 <script type="text/javascript" src="./controller/change.js"></script>
+
 <script>
 $(document).ready(function(){
 // invoke the carousel
