@@ -7,6 +7,10 @@ app.config(function($stateProvider)
       url:'contact',
       templateUrl:'contact.html'
 	})
+	.state('admin',{
+     url:'admin',
+     templateUrl:'admin.html'
+})
 	.state('home',{
 		url:'home',
 		templateUrl:'home.html',
