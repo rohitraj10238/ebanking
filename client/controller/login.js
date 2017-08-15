@@ -1,29 +1,24 @@
-angular.module('app')
-
-.controller('login' , function($scope,$http,$state){
-
-//$scope.showLoader = false;
-
-
-$scope.login = function(){
-	//$scope.showLoader = true;
-	$http({
+	app.controller('login',function($scope,$state,$http)
+	{	
+	$scope.login=function()
+{
+	$http
+	({
 		method:'GET',
 		url:'/login',
-		params:{
-			username : $scope.username,
+		params:
+		{
+			email : $scope.email,
 			password : $scope.password
 		}
 	})
-	.then(function(response){
+.then(function(response)
+	{
 		console.log(">>>>>>. response data",response.data)
-		$state.go('home');
-	
+		document.cookie = "email=" + response.data.mail;
+		console.log("cookie" , document.cookie)
+    // $scope.showLoader = false;
+		$state.go('home' , {xyz : response.data});
 	})
 }
-
-
-
-
-
-})
+});
